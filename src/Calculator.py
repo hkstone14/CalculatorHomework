@@ -18,6 +18,10 @@ def square(a):
     return a * a
 
 
+def squareroot(a):
+    return a ** (1 / 2)
+
+
 class Calculator:
     result = 0
 
@@ -53,4 +57,11 @@ class Calculator:
     def square(self, a):
         a = int(a)
         self.result = square(a)
+        return self.result
+
+    def squareroot(self, a):
+        a = float(a)
+        temp = 0
+        temp = squareroot(a)
+        self.result = float('%.10g' % temp)
         return self.result
