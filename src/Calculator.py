@@ -14,6 +14,10 @@ def division(a, b):
     return b / a
 
 
+def square(a):
+    return a * a
+
+
 class Calculator:
     result = 0
 
@@ -44,4 +48,9 @@ class Calculator:
         temp = 0
         temp = division(a, b)
         self.result = float('%.9f' % temp)
+        return self.result
+
+    def square(self, a):
+        a = int(a)
+        self.result = square(a)
         return self.result
